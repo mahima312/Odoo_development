@@ -1,0 +1,64 @@
+<odoo>
+    <record id="view_crm_lead_tree_ksc" model="ir.ui.view">
+        <field name="name">crm.lead.tree.ksc</field>
+        <field name="model">crm.lead.ksc</field>
+        <field name="arch" type="xml">
+            <tree string="Leads">
+                <field name="customer_name"/>
+                <field name="customer_email"/>
+                <field name="customer_phone"/>
+                <field name="expected_revenue"/>
+                <field name="salesperson"/>
+                <field name="channel"/>
+                <field name="state"/>
+                <field name="next_follow_up_date"/>
+                <field name="won_date"/>
+                <field name="lost_reason"/>
+                <xpath expr="//field[@name='state']" position="attributes">
+                    <attribute name="widget">statusbar</attribute>
+                </xpath>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_crm_lead_form_ksc" model="ir.ui.view">
+        <field name="name">crm.lead.form.ksc</field>
+        <field name="model">crm.lead.ksc</field>
+        <field name="arch" type="xml">
+            <form string="Lead">
+                <sheet>
+                    <group>
+                        <field name="customer_name"/>
+                        <field name="customer_email"/>
+                        <field name="customer_phone"/>
+                        <field name="expected_revenue"/>
+                        <field name="salesperson"/>
+                        <field name="state_sales_team"/>
+                        <field name="campaign"/>
+                        <field name="channel"/>
+                        <field name="state"/>
+                        <field name="next_follow_up_date"/>
+                        <field name="won_date" attrs="{'invisible': [('state', '!=', 'won')]}"/>
+                        <field name="lost_reason" attrs="{'invisible': [('state', '!=', 'lost')]}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_crm_lead_search_ksc" model="ir.ui.view">
+        <field name="name">crm.lead.search.ksc</field>
+        <field name="model">crm.lead.ksc</field>
+        <field name="arch" type="xml">
+            <search string="Leads">
+                <field name="customer_name"/>
+                <field name="customer_email"/>
+                <field name="customer_phone"/>
+                <filter name="filter_today" string="Today" domain="[('next_follow_up_date', '=', date_today())]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_by_channel" string="Channel" domain="[]" context="{'group_by':'channel'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>

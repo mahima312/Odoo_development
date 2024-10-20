@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <menuitem id="menu_res_city_ksc_root"
+          name="ResCityKsc"
+          sequence="10"/>
+
+     <menuitem id="menu_res_city_ksc_operations"
+          name="Operations"
+          parent="menu_res_city_ksc_root"
+          sequence="10"/>
+     
+     <menuitem id="menu_menu_res_city_ksc"
+          name="State"
+          parent="menu_res_city_ksc_operations"
+          sequence="10"/>
+</odoo>

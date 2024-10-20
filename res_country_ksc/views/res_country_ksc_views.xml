@@ -1,0 +1,58 @@
+<odoo>
+    <record id="view_res_country_ksc_tree" model="ir.ui.view">
+        <field name="name">res.country.ksc.tree</field>
+        <field name="model">res.country.ksc</field>
+        <field name="arch" type="xml">
+          <tree>
+            <field name="name"/>
+            <field name="short_code"/>
+            <field name="active"/>
+            </tree>
+          </field>
+    </record>
+
+    <record id="view_res_country_ksc_form" model="ir.ui.view">
+        <field name="name">res.country.ksc.form</field>
+        <field name="model">res.country.ksc</field>
+        <field name="arch" type="xml">
+          <form>
+            <sheet>
+             <group>
+                <field name="name"/>
+                <field name="short_code"/>
+                <field name="active"/>
+            </group>
+            </sheet>
+        </form>
+        </field>
+    </record>
+    <record id="view_res_country_ksc_search" model="ir.ui.view">
+        <field name="name">res.country.ksc.search</field>
+        <field name="model">res.country.ksc</field>
+        <field name="arch" type="xml">
+          <search>
+            <field name="name"/>
+            <field name="short_code"/>
+            <filter name="active_filter" string="Active" domain="[('active', '=', True)]"/>
+            <filter name="inactive_filter" string="Inactive" domain="[('active', '=', False)]"/>
+         </search>
+        </field>
+    </record>
+
+    <record id="action_res_country_ksc" model="ir.actions.act_window">
+        <field name="name">Countries</field>
+        <field name="res_model">res.country.ksc</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_res_country_ksc_tree"/>
+    </record>
+
+    <menuitem id="menu_localization"
+              name="Localization"
+              sequence="10"/>
+              
+    <menuitem id="menu_res_country_ksc"
+              name="Countries"
+              parent="menu_localization"
+              action="action_res_country_ksc"
+              sequence="10"/>
+</odoo>

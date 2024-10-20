@@ -1,0 +1,57 @@
+<odoo>
+    <record id="view_employee_leave_tree" model="ir.ui.view">
+        <field name="name">employee.leave.ksc.tree</field>
+        <field name="model">employee.leave.ksc</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_employee_leave_form" model="ir.ui.view">
+        <field name="name">employee.leave.ksc.form</field>
+        <field name="model">employee.leave.ksc</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="employee_id"/>
+                        <field name="department_id"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="status"/>
+                        <field name="leave_description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_employee_leave_search" model="ir.ui.view">
+        <field name="name">employee.leave.ksc.search</field>
+        <field name="model">employee.leave.ksc</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <filter string="Employee" name="employee_id" domain="[]" context="{'group_by':'employee_id'}"/>
+                <filter string="Department" name="department_name" domain="[]" context="{'group_by':'department_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_employee_leave" model="ir.actions.act_window">
+        <field name="name">Employees  Leave Ksc</field>
+        <field name="res_model">employee.leave.ksc</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_employee_leave_tree"/>
+        <field name="search_view_id" ref="view_employee_leave_search"/>
+    </record>
+
+    <menuitem id="employee_leave_menu" name="Leaves" action="action_employee_leave"/>
+</odoo>

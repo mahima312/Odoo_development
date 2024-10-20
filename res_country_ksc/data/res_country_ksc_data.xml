@@ -1,0 +1,12 @@
+<odoo>
+    <record id="res_country_ksc" model="res.country.ksc">
+        <field name="name">United States</field>
+        <field name="short_code">US</field>
+        <field name="active">True</field>
+    </record>
+    <record id="res_country_ksc" model="res.country.ksc">
+        <field name="name">Canada</field>
+        <field name="short_code">CA</field>
+        <field name="active">True</field>
+    </record>
+</odoo>

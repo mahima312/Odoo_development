@@ -1,0 +1,67 @@
+<odoo>
+    <record id="view_employee_ksc_tree" model="ir.ui.view">
+        <field name="name">employee.ksc1.tree</field>
+        <field name="model">employee.ksc1</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="department_id"/>
+                <field name="shift_id" options="{'no_create': True}"/>
+                <field name="job_position"/>
+                <field name="salary"/>
+                <field name="hire_date"/>
+                <field name="gender"/>
+                <field name="job_type"/>
+                <field name="is_manager"/>
+                <field name="manager_id"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_employee_ksc_form" model="ir.ui.view">
+        <field name="name">employee.ksc1.form</field>
+        <field name="model">employee.ksc1</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="department_id"/>
+                        <field name="shift_id" options="{'no_create': True}"/>
+                        <field name="job_position"/>
+                        <field name="salary"/>
+                        <field name="hire_date"/>
+                        <field name="gender"/>
+                        <field name="job_type"/>
+                        <field name="is_manager"/>
+                        <field name="manager_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_employee_ksc_search" model="ir.ui.view">
+        <field name="name">employee.ksc1.search</field>
+        <field name="model">employee.ksc1</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Employee Name"/>
+                <field name="job_position"/>
+                <filter string="Job Type" name="job_type_filter" domain="[('job_type', '=', 'permanent')]">
+                    <field name="job_type"/>
+                </filter>
+                <filter string="Gender" name="gender_filter" domain="[('gender', '=', 'male')]">
+                    <field name="gender"/>
+                </filter>
+            </search>
+        </field>
+    </record>
+     <record id="action_employee_ksc_1" model="ir.actions.act_window">
+        <field name="name">Employees Ksc</field>
+        <field name="res_model">employee.ksc1</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_employee_ksc_tree"/>
+    </record>
+
+    <menuitem id="menu_employee_ksc_root_1" name="EmployeesMgmtKsc" sequence="10"/>
+    <menuitem id="menu_employee_ksc_1" name="Employee List" parent="menu_employee_ksc_root_1" action="action_employee_ksc_1"/>
+</odoo>

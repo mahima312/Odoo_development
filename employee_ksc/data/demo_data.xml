@@ -1,0 +1,20 @@
+<odoo>
+    <record id="employee_demo_1" model="employee.ksc">
+        <field name="name">John Doe</field>
+        <field name="department_name">HR</field>
+        <field name="job_position">HR Manager</field>
+        <field name="salary">5000.00</field>
+        <field name="hire_date">2023-01-15</field>
+        <field name="gender">male</field>
+        <field name="job_type">permanent</field>
+    </record>
+    <record id="employee_demo_2" model="employee.ksc">
+        <field name="name">Jane Smith</field>
+        <field name="department_name">Finance</field>
+        <field name="job_position">Accountant</field>
+        <field name="salary">4000.00</field>
+        <field name="hire_date">2023-02-20</field>
+        <field name="gender">female</field>
+        <field name="job_type">ad_hoc</field>
+    </record>
+</odoo>

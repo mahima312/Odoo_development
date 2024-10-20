@@ -1,0 +1,11 @@
+<odoo>
+    <record id="group_employee_user" model="res.groups">
+        <field name="name">Employee User</field>
+        <!-- <field name="category_id" ref="base.module_category_hr"/> -->
+    </record>
+
+    <record id="group_employee_manager" model="res.groups">
+        <field name="name">Employee Manager</field>
+        <!-- <field name="category_id" ref="base.module_category_hr"/> -->
+    </record>
+</odoo>

@@ -1,0 +1,51 @@
+<odoo>
+    <record id="view_employee_department_tree" model="ir.ui.view">
+        <field name="name">employee.department.ksc.tree</field>
+        <field name="model">employee.department.ksc</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_employee_department_form" model="ir.ui.view">
+        <field name="name">employee.department.ksc.form</field>
+        <field name="model">employee.department.ksc</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                       
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_employee_department_search" model="ir.ui.view">
+        <field name="name">employee.department.ksc.search</field>
+        <field name="model">employee.department.ksc</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_employee_department" model="ir.actions.act_window">
+        <field name="name">Employee Department</field>
+        <field name="res_model">employee.department.ksc</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_employee_department_tree"/>
+        <field name="search_view_id" ref="view_employee_department_search"/>
+    </record>
+
+    <menuitem id="hr_employees_menu"
+        name="Employees"
+        />
+    <menuitem id="employee_department_menu"
+        name="Department"
+        parent="hr_employees_menu" 
+        action="action_employee_department"/>
+</odoo>
