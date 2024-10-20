@@ -1,0 +1,86 @@
+<odoo>
+    <record id="demo_res_partner_demo1_1" model="res.partner.demo1">
+        <field name="name">John Doe</field>
+        <field name="email">john.doe@example.com</field>
+        <field name="street1">123 Elm Street</field>
+        <field name="city">Springfield</field>
+        <field name="state">IL</field>
+        <field name="zip_code">62701</field>
+        <field name="country">USA</field>
+        <field name="birthdate">1999-06-15</field>
+        <field name="age">39</field>
+        <field name="weight">75.5</field>
+        <field name="description">A regular customer</field>
+        <field name="gender">male</field>
+        <field name="details">Details about John</field>
+        <field name="is_spectacles">True</field>
+    </record>
+    <record id="demo_res_partner_demo1_2" model="res.partner.demo1">
+        <field name="name">Ava Megon</field>
+        <field name="email">ava.megon@example.com</field>
+        <field name="street1">123 Elm Street</field>
+        <field name="city">Springfield</field>
+        <field name="state">IL</field>
+        <field name="zip_code">62701</field>
+        <field name="country">USA</field>
+        <field name="birthdate">1999-06-15</field>
+        <field name="age">39</field>
+        <field name="weight">75.5</field>
+        <field name="description">A regular customer</field>
+        <field name="gender">male</field>
+        <field name="details">Details about John</field>
+        <field name="is_spectacles">True</field>
+    </record>
+    
+    <record id="demo_res_partner_demo1_3" model="res.partner.demo1">
+        <field name="name">Asabell Victoria</field>
+        <field name="email">asabella@example.com</field>
+        <field name="street1">123 Elm Street</field>
+        <field name="city">Springfield</field>
+        <field name="state">IL</field>
+        <field name="zip_code">62701</field>
+        <field name="country">USA</field>
+        <field name="birthdate">2000-06-15</field>
+        <field name="age">39</field>
+        <field name="weight">75.5</field>
+        <field name="description">A regular customer</field>
+        <field name="gender">female</field>
+        <field name="details">Details about John</field>
+        <field name="is_spectacles">True</field>
+    </record>
+
+    <record id="demo_res_partner_demo1_4" model="res.partner.demo1">
+        <field name="name">Sophie Tracy</field>
+        <field name="email">sophie@example.com</field>
+        <field name="street1">123 Elm Street</field>
+        <field name="city">Springfield</field>
+        <field name="state">IL</field>
+        <field name="zip_code">62701</field>
+        <field name="country">USA</field>
+        <field name="birthdate">1999-06-15</field>
+        <field name="age">39</field>
+        <field name="weight">75.5</field>
+        <field name="description">A regular customer</field>
+        <field name="gender">male</field>
+        <field name="details">Details about John</field>
+        <field name="is_spectacles">True</field>
+    </record>
+
+    <record id="demo_res_partner_demo1_5" model="res.partner.demo1">
+        <field name="name">Lilly Michelle</field>
+        <field name="email">lilly@example.com</field>
+        <field name="street1">123 Elm Street</field>
+        <field name="city">Springfield</field>
+        <field name="state">IL</field>
+        <field name="zip_code">62701</field>
+        <field name="country">USA</field>
+        <field name="birthdate">1999-06-15</field>
+        <field name="age">39</field>
+        <field name="weight">75.5</field>
+        <field name="description">A regular customer</field>
+        <field name="gender">female</field>
+        <field name="details">Details about John</field>
+        <field name="is_spectacles">True</field>
+    </record>
+
+</odoo>

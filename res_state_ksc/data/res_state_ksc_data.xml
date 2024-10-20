@@ -1,0 +1,14 @@
+<odoo>
+    <record id="state_1" model="res.state.ksc">
+        <field name="name">State 1</field>
+        <field name="short_code">S1</field>
+        <field name="country_name">Country</field>
+        <field name="active">True</field>
+    </record>
+    <record id="state_2" model="res.state.ksc">
+        <field name="name">State 2</field>
+        <field name="short_code">S2</field>
+        <field name="country_name">Country</field>
+        <field name="active">False</field>
+    </record>
+</odoo>

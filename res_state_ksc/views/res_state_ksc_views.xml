@@ -1,0 +1,59 @@
+<odoo>
+    <record id="view_res_state_ksc_tree" model="ir.ui.view">
+        <field name="name">res.state.ksc.tree</field>
+        <field name="model">res.state.ksc</field>
+        <field name="arch" type="xml">
+            <tree string="States">
+                <field name="name"/>
+                <field name="short_code"/>
+                <field name="country_name"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_res_state_ksc_form" model="ir.ui.view">
+        <field name="name">res.state.ksc.form</field>
+        <field name="model">res.state.ksc</field>
+        <field name="arch" type="xml">
+            <form string="State">
+              <sheet>
+                 <group>
+                    <field name="name"/>
+                    <field name="short_code"/>
+                    <field name="country_name"/>
+                    <field name="active"/>
+                </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_res_state_ksc_search" model="ir.ui.view">
+        <field name="name">res.state.ksc.search</field>
+        <field name="model">res.state.ksc</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="State Name"/>
+                <field name="short_code" string="State Code"/>
+                <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+                <group string="Group By">
+                    <filter string="Country" name="country" domain="[]" context="{'group_by':'country_name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="action_res_state_ksc" model="ir.actions.act_window">
+        <field name="name">States</field>
+        <field name="res_model">res.state.ksc</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_res_state_ksc_tree"/>
+    </record>
+
+
+    <menuitem id="state_menu" name="States" sequence="19"/>
+    <menuitem id="res_state_ksc_menu" name="States" parent="state_menu" action="action_res_state_ksc"/>
+</odoo>
